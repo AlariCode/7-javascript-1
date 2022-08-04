@@ -1,20 +1,14 @@
-/*
-	Васи положил 12 000$ на вклад 7% годовых с
-	капитализацией 1 раз в месяц.
-	Вывести в консоль, сможет ли он купить дом за 13 500$
-	через 2 года после снятия вклада. И остаток после покупки.
+const secretNumber = '7';
 
-	Итог = Сумма * (1 + Ставка в месяц не в %) ^ срок в месяцах
-*/
+if (Number(secretNumber) === 7) {
+	console.log('Угадал строго');
+}
 
-const deposit = 10000;
-const rate = 0.07;
-const depositLength = 24;
-const houseCost = 13500;
+if (secretNumber == 7) {
+	console.log('Угадал не строго');
+}
 
-const res = deposit * (1 + rate / 12) ** 24;
-if (res > houseCost) {
-	console.log(`Мы накопили: ${res}. Можем купить. Остаток ${res - houseCost}`);
-} else {
-	console.log(`Мы накопили: ${res}. Купить не сможем (((`);
+const q = Number(prompt('Введите число'));
+if (q === 7) {
+	console.log('!');
 }
