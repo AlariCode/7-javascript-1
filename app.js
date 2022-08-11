@@ -1,19 +1,31 @@
-const KG_IN_USD = 7;
-const KM_IN_USD = 5;
+/*
+	Пользователь:
+	- Возраст
+	- Наличие работы
+	- Деньги
+	Нужно проверить может ли он купить новый MacBook за 2000$?
+	Он может брать не только свои деньги, но и взять кредит.
+	Ему дадут 500$, только если ему больше 24-х лет и он
+	имеет работу, 100$ если ему просто больше 24-х лет и 0 в
+	ином случае.
+	Напишите функцию, которая принимает данные пользователя
+	и товара и возвращает true или false;
+*/
 
-function calculateW(present) {
-	return present * KG_IN_USD;
+function computeCredit(age, hasJob = false) {
+	switch(true) {
+		case age > 24 && hasJob:
+			return 500;
+		case age > 24:
+			return 100;
+		default:
+			return 0;
+	}
 }
 
-function calculateKm(distance) {
-	return distance * KM_IN_USD;
+function canBuy(productPrice, age, money, hasJob = false) {
+	const creditMoney = computeCredit(age, hasJob);
+	return productPrice <= money + creditMoney;
 }
 
-function getExchagePrice(present1, present2, distance) {
-	const price1 = calculateW(present1);
-	const price2 = calculateW(present2);
-	const distancePrice = calculateKm(distance);
-	return price1 + price2 + distancePrice;
-}
-
-console.log(getExchagePrice(1,2,10));
+console.log(canBuy(2000, 25, 1500, true));
