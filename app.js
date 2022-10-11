@@ -1,57 +1,25 @@
-/*
-	Есть выгрузка операций пользователя
-	const operations = [1000, -700, 300, -500, 10000];
-	а так же начальный баланс в 100$
-	Необходимо сделать функции расчёта:
-	- Итогового баланса
-	- Наличия отрицательного баланса (если после очередной операции
-		баланс < 0, то выдавать false)
-	- Расчёта среднего расхода и среднего дохода
-*/
-const operations = [1000, -700, 300, -500, 10000];
-const startingBalance = 100;
-
-function getBalance(arrayOfOperations, initailBalance) {
-	let balance = initailBalance;
-	for (const element of arrayOfOperations) {
-		balance += element;
-	}
-	return balance;
+function add(a, b) {
+	return a + b;
 }
 
-console.log(getBalance(operations, startingBalance));
-
-function checkOperations(arrayOfOperations, initailBalance) {
-	let balance = initailBalance;
-	let isOk = true;
-	for (const element of arrayOfOperations) {
-		balance += element;
-		if (balance < 0) {
-			isOk = false;
-			break;
-		}
-	}
-	return isOk;
+function subtract(a, b) {
+	return a - b;
 }
 
-console.log(checkOperations(operations, startingBalance));
-
-function avarageOperations(arrayOfOperations) {
-	let positiveCount = 0;
-	let positiveSum = 0;
-	let negativeCount = 0;
-	let negativeSum = 0;
-	for (const element of arrayOfOperations) {
-		if (element > 0) {
-			positiveCount++;
-			positiveSum += element;
-		}
-		if (element < 0) {
-			negativeCount++;
-			negativeSum += element;
-		}
-	}
-	return [positiveSum / positiveCount, negativeSum / negativeCount];
+function power(a, b) {
+	return a**b;
 }
 
-console.log(avarageOperations(operations));
+//Функция высшего порядка
+function calculate(a, b, fn) {
+	console.log(fn.name);
+	const res = fn(a, b);
+	return res;
+}
+
+let res = calculate(3, 5, add);
+console.log(res);
+res = calculate(3, 5, subtract);
+console.log(res);
+res = calculate(3, 5, power);
+console.log(res);
