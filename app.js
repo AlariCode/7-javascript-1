@@ -1,11 +1,13 @@
-const arr = [1, 2, 3, 4, 5];
+const userName = 'Вася Пупкина';
+console.log(userName);
+console.log(userName[0] + userName[1]);
+console.log(userName.charAt(2));
 
-console.log(new Array(1, 2, 3, 4, 5));
-const arr2 = new Array(5);
-console.log(arr2);
-arr2.fill(1, 0, 3);
-arr2.fill(2, 3, 5);
-console.log(arr2);
+console.log(userName.length);
+console.log(userName.indexOf('уп'));
+console.log(userName.lastIndexOf('а'));
+console.log(userName.includes('уп'));
+console.log(userName.includes('упd'));
 
-const arr3 = Array.from({ length: 5 }, (cur, i) => i + 1);
-console.log(arr3)
+console.log(userName.slice(5));
+console.log(userName.slice(5, 8));
