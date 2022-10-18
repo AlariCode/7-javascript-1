@@ -1,13 +1,22 @@
-/* Релизовать методы увеличения и уменьшения баланса, 
-	при котором каждая операция сохраняется в массив
-	operations в виде { reason: 'Оплата налогов', sum: -100 }.
-	Возвращается true, если успешно и false, если не хватает баланса
-	Так же реализовать метод вывода числа операций по кошельку
- */
+const cities = {
+	msk: {
+		let: 200,
+		temp: 25
+	},
+	spb: {
+		lt: 100,
+		temp: 20
+	}
+}
 
-const initialBalance = 7;
+let sumTemp = 0;
+let citiesCount = Object.keys(cities).length;
+// for (const key in cities) {
+// 	sumTemp += cities[key].temp;
+// }
+// console.log(sumTemp / citiesCount);
 
-const wallet = {
-	balance: initialBalance,
-	operations: [],
-};
+for (const key of Object.keys(cities)) {
+	sumTemp += cities[key].temp;
+}
+console.log(sumTemp / citiesCount);
