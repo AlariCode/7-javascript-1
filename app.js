@@ -1,15 +1,14 @@
-const sum = 1;
-console.log('start');
-console.log(sum);
+'use strict';
 
-function add5(n) {
-	n = n + 5;
-	if (n > 100) {
-		return n;
-	}
-	console.log(n);
-	return add5(n);
+let myCoolVariable = 1;
+
+if (true) {
+	myCoolVariable = 3;
 }
+console.log(myCoolVariable);
 
-add5(sum)
-console.log('ended');
+
+function a(b, b) {
+	console.log(b);
+}
+a(1,1)
