@@ -1,14 +1,27 @@
-'use strict';
+'user strict';
 
-let myCoolVariable = 1;
-
-if (true) {
-	myCoolVariable = 3;
+let successMessage = 'Успех';
+const user = {
+	name: 'Вася',
+	roles: []
 }
-console.log(myCoolVariable);
 
+function addRole(user, role) {
+	if (role == 'admin') {
+		const message = 'Ошибка';
+		console.log(message);
+		return user;
+	}
+	user.roles.push(role);
+	let successMessage = 'Ура';
+	console.log(successMessage);
 
-function a(b, b) {
-	console.log(b);
+	function logRoles() {
+		console.log(user.roles);
+	}
+	logRoles();
+	return user;
 }
-a(1,1)
+
+console.log(addRole(user, 'admsin'));
+console.log(successMessage);
