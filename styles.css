@@ -1,0 +1,41 @@
+.panel {
+	font-size: 18px;
+	color: white;
+	background: rgba(255,255,255,0.05);
+	border-radius: 10px;
+	padding: 40px;
+	margin-bottom: 20px;
+}
+
+.button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	cursor: pointer;
+	transition: all .2s;
+	text-align: center;
+	border-radius: 10px;
+	background: #6c38cc;
+	color: white;
+	border: none;
+	padding: 20px 40px;
+}
+
+.button:hover {
+	background-color: #844fe6;
+}
+
+.input {
+	box-sizing: border-box;
+	padding: 15px 16px;
+	color: white;
+	border: 1px solid rgba(212, 212, 212, 0.05);
+	border-radius: 10px;
+	background: rgba(255, 255, 255, 0.05);
+	height: 56px;
+	font-size: 18px;
+	line-height: 21px;
+	outline: none;
+	box-shadow: none;
+}
