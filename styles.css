@@ -7,6 +7,16 @@
 	margin-bottom: 20px;
 }
 
+.notification {
+	font-size: 16px;
+	color: white;
+	margin: 20px;
+}
+
+.notification_hidden {
+	display: none;
+}
+
 .button {
 	display: inline-flex;
 	align-items: center;
