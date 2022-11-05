@@ -6,6 +6,7 @@ body {
 	font-family: 'Comfortaa', cursive;
 	margin: 0;
 	background-color: #F3F6FD;
+	font-weight: 400;
 }
 
 .app {
@@ -73,4 +74,152 @@ body {
 
 .menu__add:hover {
 	background: #EFF2FF;
+}
+
+.content {
+	min-width: 900px;
+	padding: 45px;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+h1 {
+	font-size: 30px;
+	line-height: 33px;
+	color: #000000;
+}
+
+.progress {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	min-width: 235px;
+}
+
+.progress__text {
+	display: flex;
+	justify-content: space-between;
+}
+
+.progress__name {
+	font-size: 14px;
+	line-height: 16px;
+	color: #232360;
+}
+
+.progress__percent {
+	font-size: 12px;
+	line-height: 13px;
+	color: #768396;
+}
+
+.progress__bar {
+	width: 100%;
+	background: #E6E9ED;
+	border-radius: 4px;
+	height: 5px;
+	position: relative;
+}
+
+.progress__cover-bar {
+	position: absolute;
+	width: 50%;
+	height: 5px;
+	border-radius: 4px;
+	background: #5051F9;
+}
+
+main {
+	margin-top: 30px;
+}
+
+.habbit {
+	background: #FFFFFF;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 12px;
+}
+
+.habbit__day {
+	background: #FBFAFF;
+	border-radius: 10px 0 0 10px;
+	border-right: 1px solid #E7EBFB;
+	font-size: 14px;
+	line-height: 16px;
+	padding: 20px 40px;
+	min-width: 150px;
+}
+
+.habbit__comment {
+	font-size: 16px;
+	line-height: 18px;
+	padding: 20px 25px;
+}
+
+.habbit__delete {
+	margin-left: auto;
+	margin-right: 10px;
+	background: none;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+	padding: 2px;
+}
+
+.habbit__delete:hover {
+	background: #EFF2FF;
+}
+
+input {
+	background: #FFFFFF;
+	border: 1px solid #E7EBFB;
+	border-radius: 9px;
+	padding: 12px 20px;
+	font-family: 'Comfortaa', cursive;
+	flex: 1;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 16px;
+}
+
+input::placeholder {
+	color: #8899A8;
+}
+
+.habbit__form {
+	display: flex;
+	gap: 15px;
+	width: 100%;
+	padding: 0px 10px 0 25px ;
+	position: relative;
+}
+
+.input_icon {
+	padding-left: 45px;
+}
+
+.input__icon {
+	position: absolute;
+	top: 10px;
+	left: 45px;
+}
+
+.button {
+	background: #EDECFE;
+	border-radius: 9px;
+	border: none;
+	font-size: 13px;
+	line-height: 14px;
+	color: #5051F9;
+	padding: 14px 30px;
+	cursor: pointer;
+}
+
+.button:hover {
+	background: #dcdaff;
 }
