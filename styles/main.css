@@ -227,3 +227,100 @@ input.error {
 .button:hover {
 	background: #dcdaff;
 }
+
+.cover {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	background: rgba(0, 0, 0, 0.25);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.cover_hidden {
+	/* display: none; */
+}
+
+.popup {
+	background: #FFFFFF;
+	box-shadow: 0px 8px 14px 12px rgba(56, 56, 56, 0.05);
+	border-radius: 10px;
+	max-width: 600px;
+	width: 100%;
+	padding: 20px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.popup__close {
+	position: absolute;
+	right: 15px;
+	top: 15px;
+	border: none;
+	background: none;
+	cursor: pointer;
+}
+
+h2 {
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 27px;
+}
+
+.icon-label {
+	font-size: 14px;
+	line-height: 16px;
+	color: #768396;
+	margin-bottom: 10px;
+}
+
+.icon-select {
+	display: flex;
+	gap: 25px;
+	margin-bottom: 20px;
+}
+
+.icon {
+	border: 1px solid #5051F9;
+	border-radius: 14px;
+	background: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 45px;
+	height: 45px;
+	cursor: pointer;
+}
+
+.icon_active {
+	background: #5051F9;
+}
+
+.icon:hover {
+	background: #6A6AFB;
+}
+
+.icon:hover img {
+	filter: brightness(0) invert(1);
+}
+
+.icon_active img {
+	filter: brightness(0) invert(1);
+}
+
+.popup__form {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 15px;
+}
+
+.popup__form input {
+	width: 100%;
+}
